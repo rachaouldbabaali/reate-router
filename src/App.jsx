@@ -10,6 +10,8 @@ import Products from "./pages/Products";
 import ProtectedRoute from "./components/ProtectedRoutes";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import AddProduct from "./pages/AddProduct";
+import AdminRoutes from "./components/AdminRoutes";
 
 function App() {
   return (
@@ -29,6 +31,14 @@ function App() {
                 <ProtectedRoute>
                   <Products />
                 </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/products/add"
+              element={
+                <AdminRoutes>
+                  <AddProduct />
+                </AdminRoutes>
               }
             />
           </Routes>
